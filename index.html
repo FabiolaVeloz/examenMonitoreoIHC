@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen Monitoreo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 2;
+        }
+
+        body {
+            margin-bottom: 100px;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        main {
+            margin-top: 70px;
+        }
+
+        .card {
+            border: none;
+            /* Elimina los bordes */
+        }
+
+        .card-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        #plano {
+            max-width: 100%;
+            height: auto;
+        }
+
+
+        #focoRecamara {
+            position: absolute;
+            width: 5%;
+            top: 30%;
+            height: auto;
+            left: 49%;
+            z-index: 1;
+            transform: translate(-50%, -50%);
+        }
+
+        #alarma {
+            position: absolute;
+            width: 5%;
+            top: 82%;
+            height: auto;
+            left: 45%;
+            z-index: 1;
+            transform: translate(-50%, -50%);
+        }
+
+        #focoSala {
+            position: absolute;
+            width: 5%;
+            top: 80%;
+            height: auto;
+            left: 20%;
+            z-index: 1;
+            transform: translate(-50%, -50%);
+        }
+
+        #ventilador {
+            position: absolute;
+            width: 5%;
+            top: 80%;
+            height: auto;
+            left: 52%;
+            z-index: 1;
+            transform: translate(-50%, -50%);
+        }
+
+        .focoJardin {
+            position: absolute;
+            width: 5%;
+            height: auto;
+            z-index: 1;
+            transform: translate(-50%, -50%);
+        }
+
+        .cortinas {
+            position: absolute;
+            width: 7%;
+            height: auto;
+            z-index: 1;
+            transform: translate(-50%, -50%);
+        }
+
+        .camaras {
+            position: absolute;
+            width: 5%;
+            height: auto;
+            z-index: 1;
+            transform: translate(-50%, -50%);
+        }
+
+      
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="imágenes/logo.png" alt="Logo" width="55" height="40"
+                        class="d-inline-block align-text-top me-2">
+                    <span class="fw-bold">Examen Monitoreo</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <!-- <a class="nav-link" href="https://fabiolaveloz.github.io/web-app-voice-git/">Identificación de Orden por Voz</a> -->
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+        <div class="container">
+            <div class="card">
+                <div class="card-body card-content">
+                    <img src="imágenes/plano.png" alt="Plano" id="plano" class="img-fluid">
+                    <img src="imágenes/focoRecamaraOff.png" alt="Foco de la Recámara" id="focoRecamara" class="foco">
+                    <img src="imágenes/focoSalaOff.png" alt="Foco de la sala" id="focoSala" class="foco">
+                    <img src="imágenes/focoJardinOff.png" alt="Foco del jardín" class="focoJardin"
+                        style="top: 10%; left: 15%;">
+                    <img src="imágenes/focoJardinOff.png" alt="Foco del jardín" class="focoJardin"
+                        style="top: 10%; left: 35%;">
+                    <img src="imágenes/focoJardinOff.png" alt="Foco del jardín" class="focoJardin"
+                        style="top: 10%; left: 55%;">
+                    <img src="imágenes/focoJardinOff.png" alt="Foco del jardín" class="focoJardin"
+                        style="top: 25%; left: 81%;">
+                    <img src="imágenes/focoJardinOff.png" alt="Foco del jardín" class="focoJardin"
+                        style="top: 40%; left: 81%;">
+                    <img src="imágenes/ventiladorApagado.png" alt="ventilador" id="ventilador" class="foco">
+                    
+                    <img src="imágenes/cortinasCerradas.png" alt="Cortinas" class="cortinas"
+                    style="top: 87%; left: 20%;">
+                    <img src="imágenes/cortinasCerradas.png" alt="Cortinas" class="cortinas"
+                    style="top: 87%; left: 30%;">
+                    <img src="imágenes/cortinasCerradas.png" alt="Cortinas" class="cortinas"
+                    style="top: 87%; left: 53%;">
+
+                    <img src="imágenes/camaraOff.png" alt="camaras" class="camaras"
+                    style="top: 89%; left: 74%;">
+                    <img src="imágenes/camaraOff.png" alt="camaras" class="camaras"
+                    style="top: 93%; left: 25%;">
+                    <img src="imágenes/camaraOff.png" alt="camaras" class="camaras"
+                    style="top: 5%; left: 30%;">
+
+                    <img src="imágenes/alarmaApagada.png" alt="alarma" id="alarma" class="foco">
+                    <audio id="sonidoEncendido" src="sonidos/alarmaOn.mp3"></audio>
+                    <audio id="sonidoApagado" src="sonidos/alarmaOff.mp3"></audio>
+            </div>
+        </div>
+    </main>
+
+
+    <footer class="footer mt- py-3 bg-light">
+        <div class="container text-center">
+            <span class="text-muted">Todos los derechos reservados. Fabiola Veloz © 2024 </span>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="main.js" defer></script>
+
+</body>
+
+</html>
