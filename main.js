@@ -106,11 +106,11 @@ function manejarAccion(ultimoDato) {
             break;
         case 'enciende la alarma':
             document.getElementById('alarma').src = 'imágenes/alarmaEncendida.png';
-            document.getElementById('sonidoEncendido').play(); // Reproduce el sonido de encendido
+            document.getElementById('sonidoEncendido').play(); 
             break;
         case 'apaga la alarma':
             document.getElementById('alarma').src = 'imágenes/alarmaApagada.png';
-            document.getElementById('sonidoApagado').play(); // Reproduce el sonido de apagado
+            document.getElementById('sonidoApagado').play(); 
             break;
         default:
             // Instrucción no reconocida
