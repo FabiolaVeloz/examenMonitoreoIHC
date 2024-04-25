@@ -1,4 +1,4 @@
-/*
+
 let ultimoDatoAnterior = null; 
 setInterval(recibirDatos, 2000);
 
@@ -12,7 +12,7 @@ async function recibirDatos() {
             }
         };
 
-        const url = 'https://660c52433a0766e85dbdebe2.mockapi.io/comandos';
+        const url = 'https://660c52433a0766e85dbdebe2.mockapi.io/examen';
         // Recibir los datos de la URL proporcionada
         const response = await fetch(url, opciones);
 
@@ -31,13 +31,10 @@ async function recibirDatos() {
         // Verifica si el último dato ha cambiado
         if (!esIgual(ultimoDato, ultimoDatoAnterior)) {
             // Sustitución en los párrafos
-            const parrafoOrdenRecibida = document.getElementById('OrdenRecibida');
-            parrafoOrdenRecibida.textContent = ultimoDato.instruccion;
-            const parrafoHora = document.getElementById('Hora');
-            parrafoHora.textContent = ultimoDato.fechaHora;
-            // Llama a la función para manejar las acciones basadas en el último dato
-            manejarAccion(ultimoDato);
-            // Actualiza el valor del último dato anterior
+      
+            let variable = ultimoDato.orden;
+           
+            manejarAccion(ultimoDato.orden);
             ultimoDatoAnterior = ultimoDato;
         }
 
@@ -53,19 +50,9 @@ function esIgual(objA, objB) {
     return JSON.stringify(objA) === JSON.stringify(objB);
 }
 
-*/
-
-
-//Cambiar a ultimoDato que es el que viene de MockAPI
-
-let prueba ="apaga el ventilador";
-
-
-manejarAccion(prueba);
-
-function manejarAccion(prueba) {
+function manejarAccion(ultimoDato) {
     //switch (ultimoDato.instruccion.toLowerCase()) {
-    switch (prueba) {
+    switch (ultimoDato) {
         case 'enciende la luz de la recámara':
             document.getElementById('focoRecamara').src = 'imágenes/focoRecamaraOn.png';
             break;
