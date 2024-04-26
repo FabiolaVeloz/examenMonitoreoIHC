@@ -105,8 +105,8 @@ function manejarAccion(ultimoDato) {
             }
             break;
         case 'enciende la alarma':
+            document.getElementById('alarmaEncendida').play();     
             document.getElementById('alarma').src = 'imágenes/alarmaEncendida.png';
-            document.getElementById('sonidoEncendido').play(); 
             break;
         case 'apaga la alarma':
             document.getElementById('alarma').src = 'imágenes/alarmaApagada.png';
